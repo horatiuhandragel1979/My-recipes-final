@@ -10,11 +10,11 @@
 <body>
 <div layout:fragment="continut" class="container" >
     <div class="row">
-        <div class="col-sm-6"><br>
+        <div class="col-sm-4">
             <h3 th:text="${detailsRecipe.recipeName}"></h3><br>
         </div>
         <div class="col-sm-6"><br>
-            <h3 th:text="${detailsRecipe.created}"></h3><br>
+            <h6 th:text="${detailsRecipe.created}"></h6>
         </div>
         <div class="col-sm-1">
             <td>
@@ -31,17 +31,17 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <img th:src="@{'data:image/png;base64,'+${detailsRecipe.image}}" width="350" height="350"/>
+            <img th:src="@{'data:image/png;base64,'+${detailsRecipe.image}}" width="350" height="350" alt="Me"/>
         </div>
         <div class="col-sm-8">
             <h2>Ingredients</h2>
-            <p class="card-text" style="word-wrap:break-word" th:text="${detailsRecipe.ingredients}"></p>
+            <per><p class="card-text" style="word-wrap:break-word" th:text="${detailsRecipe.ingredients}"></p></per>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <h2> Directions</h2>
-            <p class="card-text" style="word-wrap:break-word" th:text="${ detailsRecipe.directions}"></p>
+            <h2> Directions</h2><per>
+            <p class="card-text" style="word-wrap:break-word" th:text="${ detailsRecipe.directions}"></p></per>
         </div>
     </div>
 </div>
